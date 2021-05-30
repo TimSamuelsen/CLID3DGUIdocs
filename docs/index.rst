@@ -5,6 +5,8 @@
 
 Welcome to the CLIP3DGUI Documentation!
 ==================================================
+.. image:: https://i.imgur.com/mdh3a7Y.jpg
+
 
 Contents:
 
