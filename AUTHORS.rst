@@ -1,7 +1,7 @@
 Authors
 -------
 
-* Tim Samuelsen
-
+* Eric (New contributor)
+* Anthony 
 
 
