@@ -82,20 +82,30 @@ Peripheral Controls
     :figwidth: 300px
 
 **Light Engine:**
+The light engine connects though USB HID. Click connect, if connection was succesful it should display the last error code
+(usually 0), if it fails it will display "Light Engine Connection Failed" in which it failed outright or "Failed to get last error code"
+in which the connection was succesful but communication is not work (in this case restart the light engine).
 
 **Stage:**
+The stage connects through RS232 serial. Select the correct COM port and click connect. To validate stage connection get the last stage position
+and verify that a value is displayed.
 
 **Pump:**
+The pump connects in a similar manner to the stage. Select the correct COM port and click connect. The pump is not currently in use.
 
 Input Files
 ---------------------------
-.. figure:: https://i.imgur.com/CBlX0mU.png
+.. figure:: https://imgur.com/V4CLCEd
     :align: right
     :figwidth: 300px
 
 **Image Files:**
+Object image files are selected here. Make sure your image files are located in the same file and named alphabetically
+the software will sort the files alphabetically as they are uploaded to the light engine.
 
 **Print Script:**
+The print script is used to dynamically control print variables on a layer by layer basis. Print scripts should be in the format of
+.txt or .csv files where each row number represents the layer number and consists of: [Exposure time in us,  UV Intensity,].
 
 Print Controls
 ---------------------------
@@ -104,16 +114,24 @@ Print Controls
     :figwidth: 300px
 
 **Start Print:**
+Starts the prints, must be preceded by Initialize and Synchronize and the stage must be at the correct starting position.
 
 **Initialize and Synchronize:**
+Prepares the system for your print based on your print settings and parameters. Will prompt the user to verify the print parameters
+and settings. Once initialization has completed and the stage has reached the correct starting position, the print can now be started.
 
 **Abort:**
+The abort button acts as an emergency stop, click abort if something is going wrong with your print.
 
 **Image Processing:**
+Open the image processing pop-up window. See Features->Image Processing to learn more.
 
 **Manual Pump Control:**
+Opens the manual pump control pop-up window. See Features->Manual Controls->Manual Pump Controls to learn more.
 
 **Manual Stage Control:**
+Opens the manual stage control pop-up window. See Features->Manual Controls->Manual Pump Controls to learn more.
+
 
 Print Log
 -------------------
@@ -122,9 +140,12 @@ Print Log
     :figwidth: 300px
 
 **Terminal Output:**
+The terminal output provides a live readout of every operation performed by the software. This provides the user with insight
+into the inner workings of the GUI and a valuable debug readout. Upon print completion or abort the terminal output is stored in a .txt
+log with a timestamp for that print.
 
 **Log File Destination:**
-
+Determines where the log file will be stored.
 
 Print Monitoring
 ---------------------------
