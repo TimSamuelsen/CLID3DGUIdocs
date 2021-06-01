@@ -2,14 +2,14 @@
 Contributors
 ============
 
-Maintainers
+Maintainer
 -----------
 * Tim Samuelsen (`@TimSamuelsen`/tim.samuelsen@gmail.com)
 
 Contributors
 ------------
-* Brian Lee
-* Kaiwen Hsiao
+* Brian Lee, Ph.D.
+* Kaiwen Hsiao, Ph.D.
 * Gabriel Lipkowitz
 
 Acknowledgements
