@@ -95,7 +95,7 @@ The pump connects in a similar manner to the stage. Select the correct COM port 
 
 Input Files
 ---------------------------
-.. figure:: https://imgur.com/V4CLCEd
+.. figure:: https://i.imgur.com/V4CLCEd.png
     :align: right
     :figwidth: 300px
 
