@@ -14,6 +14,9 @@ is encoded in the green channel, and 17-24 is encoded in the red channel.
 
 .. image:: https://i.imgur.com/ha9SCOg.png
 
+Controls
+-----------
+
 **Input Images:**
 Select the binary input image to be encoded.
 
