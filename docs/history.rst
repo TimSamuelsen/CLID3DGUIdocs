@@ -38,7 +38,7 @@ The project was in the prototyping stage from 01/17/2021-03/24/2021.
 * **FIX:**  Fixed linking issues for .dll files, video pattern mode artifact solved
 * **IMPROVED:**
 
-0.1.5 (2021-05-14)
+0.1.5 (2021-05-26)
 ~~~~~~~~~~~~~~~~~~~
 
 * **NEW:** LED Intensity is now in print script, bit depth selection to enable grayscale, continuous motion print mode
