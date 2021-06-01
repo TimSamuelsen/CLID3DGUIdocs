@@ -11,7 +11,8 @@ Print Customization
     :align: right
     :figwidth: 300px
 
-The print customization window determines high level print features.
+The print customization window determines high level print features. See
+Features->Print Modes to learn more.
 
 **Select Resin:**
 Currently not in use.
