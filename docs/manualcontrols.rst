@@ -1,6 +1,6 @@
-============
+===============
 Manual Controls
-============
+===============
 
 
 Manual Stage Control
@@ -13,11 +13,11 @@ Manual Stage Control
 
 **Connect To Stage:**
 
-**Movement Controls**
+**Movement Controls:**
 
-**Movement Configuration**
+**Movement Configuration:**
 
-**Terminal Output**
+**Terminal Output:**
 
 Manual Pump Control
 ---------------------------
@@ -28,12 +28,12 @@ Manual Pump Control
     
 **Select Target:**
 
-**Clear Stored Action**
+**Clear Stored Action:**
 
-**Connect To Pumpt**
+**Connect To Pump:**
 
 **Configuration Commands**
 
-**Custom Commands
+**Custom Commands:**
 
-**Terminal Output
+**Terminal Output:**
