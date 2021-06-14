@@ -10,7 +10,7 @@ CLIP3DGUI is print control software developed for the DeSimone Research Group in
 CLIP 3D printers at Stanford University. It is designed to provide lab members with a fully
 custom software solution that integrates all the features required to perform their experiments.
 
-* **Free software:** MIT license
+* **Free software:** GPLv3 License
 * **Github repository:** https://github.com/TimSamuelsen/CLIP3DPrinterGUI
 * **Qt Version:** 5.15.2
 
