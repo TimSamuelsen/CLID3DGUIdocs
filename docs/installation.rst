@@ -11,3 +11,6 @@ The first requirement for installation is installing Qt. This video demonstrates
     </div>
     
 After Qt has been installed clone the repository located at: https://github.com/TimSamuelsen/CLIP3DPrinterGUI 
+
+Once the repository has been cloned make sure to add the following to your PATH environment variable:
+PathToRepo/src/OpenCV/install/x64/mingw/bin
