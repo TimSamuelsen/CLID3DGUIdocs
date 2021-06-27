@@ -29,6 +29,7 @@ custom software solution that integrates all the features required to perform th
    
    userinterface
    printmodes
+   dynamicprint
    imageprocessing
    manualcontrols
    
