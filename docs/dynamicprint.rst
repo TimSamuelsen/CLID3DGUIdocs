@@ -14,7 +14,7 @@ An example print script is included on the left side below with exposure time va
 LED intensity values ranging from 21-30 and dark time ranging from 31-40. The example print script was generated in
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
-.. figure:: https://imgur.com/UB2vqhL
+.. figure:: https://i.imgur.com/UB2vqhL.png
     :align: left
     :figwidth: 250px
     
