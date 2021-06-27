@@ -20,7 +20,7 @@ Excel and saved as a .csv file, the image below on the right side displays the e
 .. |logo2| image:: https://i.imgur.com/J1b4koi.png
     :scale: 60%
 
-.. table:: My table
+.. table:: 30 μm CLIP print script
    :align: center
 
    +---------+---------+
@@ -41,7 +41,7 @@ Excel and saved as a .csv file, the image below on the right side displays the e
 .. |logo4| image:: https://i.imgur.com/1I76b2v.png
     :scale: 60%
 
-.. table:: My table
+.. table:: iCLIP print script
    :align: center
 
    +---------+---------+
