@@ -14,13 +14,10 @@ An example print script is included on the left side below with exposure time va
 LED intensity values ranging from 21-30 and dark time ranging from 31-40. The example print script was generated in
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
-.. figure:: https://i.imgur.com/UB2vqhL.png
-    :align: left
-    :figwidth: 250px
-    
-.. figure:: https://i.imgur.com/J1b4koi.png
-    :align: right
-    :figwidth: 250px
+.. image:: https://i.imgur.com/UB2vqhL.png
+   :width: 49%
+.. image:: https://i.imgur.com/J1b4koi.png
+   :width: 49%
 
 **iCLIP printer:**
 The iCLIP printer can control the exposure time (ms), LED intensity, dark time (ms), injection volume per layer
@@ -30,10 +27,9 @@ LED intensity values ranging from 21-30, dark time ranging from 31-40, injection
 and injection rate ranging from 51-60. The example print script was generated in
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
-.. figure:: https://i.imgur.com/pHoKDPa.png
-    :align: left
-    :figwidth: 300px
-    
-.. figure:: https://i.imgur.com/1I76b2v.png
-    :align: right
-    :figwidth: 300px
+.. image:: https://i.imgur.com/pHoKDPa.png
+   :width: 49%
+.. image:: https://i.imgur.com/1I76b2v.png
+   :width: 49%
+
+
