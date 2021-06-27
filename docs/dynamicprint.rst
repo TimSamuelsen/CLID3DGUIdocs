@@ -15,8 +15,11 @@ LED intensity values ranging from 21-30 and dark time ranging from 31-40. The ex
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
 .. image:: https://i.imgur.com/UB2vqhL.png
+   :align: center
    :width: 30%
+   
 .. image:: https://i.imgur.com/J1b4koi.png
+   :align: center
    :width: 30%
 
 **iCLIP printer:**
@@ -28,8 +31,11 @@ and injection rate ranging from 51-60. The example print script was generated in
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
 .. image:: https://i.imgur.com/pHoKDPa.png
+   :align: center
    :width: 40%
+   
 .. image:: https://i.imgur.com/1I76b2v.png
+   :align: center
    :width: 40%
 
 
