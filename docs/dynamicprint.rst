@@ -16,11 +16,9 @@ Excel and saved as a .csv file, the image below on the right side displays the e
 
 .. image:: https://i.imgur.com/UB2vqhL.png
    :align: center
-   :width: 30%
    
 .. image:: https://i.imgur.com/J1b4koi.png
    :align: center
-   :width: 30%
 
 **iCLIP printer:**
 The iCLIP printer can control the exposure time (ms), LED intensity, dark time (ms), injection volume per layer
@@ -32,10 +30,8 @@ Excel and saved as a .csv file, the image below on the right side displays the e
 
 .. image:: https://i.imgur.com/pHoKDPa.png
    :align: center
-   :width: 40%
    
 .. image:: https://i.imgur.com/1I76b2v.png
    :align: center
-   :width: 40%
 
 
