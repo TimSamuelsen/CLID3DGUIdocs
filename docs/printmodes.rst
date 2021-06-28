@@ -1,11 +1,10 @@
 ============
 Print Modes
 ============
-Print modes are settings which fundamentally change the print process. 
+Print modes are settings which fundamentally change the print process. More details to come upon publication of research.
 
 Printer Select
 -----------------
-Selects between CLIP and DI-CLIP print process. Currently the DI-CLIP print process is not fully implemented.
 
 Projection Modes
 ------------------
