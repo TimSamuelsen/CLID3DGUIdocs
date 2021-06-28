@@ -10,7 +10,7 @@ The print script is used to dynamically control print parameters on a layer by l
 (.csv) file that can be generated either with excel, text editors or with a custom script.
 
 
-30 μm CLIP printer:
+30 μm CLIP printer
 ---------------------------
 
 The 30 μm printer can control the exposure time (ms), LED intensity, and dark time (ms) as dynamic variables. 
@@ -31,7 +31,7 @@ Excel and saved as a .csv file, the image below on the right side displays the e
    | |logo1| | |logo2| |
    +---------+---------+
 
-iCLIP printer:
+iCLIP printer
 ---------------------------
 The iCLIP printer can control the exposure time (ms), LED intensity, dark time (ms), injection volume per layer
 (μl), and injection rate (μl/s) as dynamic variables. 
