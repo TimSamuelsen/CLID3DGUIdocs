@@ -6,6 +6,10 @@
 	color: #ddcf99;
 }
 
+.wy-side-nav-search, .wy-nav-top {
+      background: #8c1515;
+}
+
 .wy-menu-vertical a {
 	color: white;
 }
