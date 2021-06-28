@@ -1,14 +1,18 @@
-============
+*************************
 Dynamic Print Controls
-============
+*************************
+
+.. contents:: Table of Contents
 
 Print Script
----------------------------
+=============
 The print script is used to dynamically control print parameters on a layer by layer basis. The print script is a comma-separated values
 (.csv) file that can be generated either with excel, text editors or with a custom script.
 
 
-**30 μm CLIP printer:**
+30 μm CLIP printer:
+---------------------------
+
 The 30 μm printer can control the exposure time (ms), LED intensity, and dark time (ms) as dynamic variables. 
 An example print script is included on the left side below with exposure time values ranging from 11-20, 
 LED intensity values ranging from 21-30 and dark time ranging from 31-40. The example print script was generated in
@@ -20,14 +24,15 @@ Excel and saved as a .csv file, the image below on the right side displays the e
 .. |logo2| image:: https://i.imgur.com/J1b4koi.png
     :scale: 60%
 
-.. table:: 30 μm CLIP print script
+.. table:: 30 μm CLIP print script (exp time, LED intensity, dark time)
    :align: center
 
    +---------+---------+
    | |logo1| | |logo2| |
    +---------+---------+
 
-**iCLIP printer:**
+iCLIP printer:
+---------------------------
 The iCLIP printer can control the exposure time (ms), LED intensity, dark time (ms), injection volume per layer
 (μl), and injection rate (μl/s) as dynamic variables. 
 An example print script is included on the left side below with the exposure time values ranging from 11-20, 
@@ -41,7 +46,7 @@ Excel and saved as a .csv file, the image below on the right side displays the e
 .. |logo4| image:: https://i.imgur.com/1I76b2v.png
     :scale: 60%
 
-.. table:: iCLIP print script
+.. table:: iCLIP print script (exp time, LED intensity, dark time, inj vol, inj rate)
    :align: center
 
    +---------+---------+
