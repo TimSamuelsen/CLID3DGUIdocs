@@ -47,13 +47,13 @@ The project was in the prototyping phase from 01/17/2021-03/24/2021.
 * **NEW:** Pumping mode added as high level print control variable
 
 0.2 (2021-06-11)
-~~~~~~~~~~~~~~~~~~~
+------------------
 
 * **NEW:** First implementation of Video Pattern mode
 * **FIX:**  Reupload issue and timer drift issue when in pumping mode
 * **IMPROVED:** Comments
 
 0.3 (2021-06-25)
-~~~~~~~~~~~~~~~~~~~
+------------------
 
 * **NEW:** iCLIP printer support
