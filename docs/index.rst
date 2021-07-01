@@ -4,6 +4,9 @@
    contain the root `toctree` directive.
 .. image:: https://i.imgur.com/7DLm4m2.png
 
+.. image:: https://app.codacy.com/project/badge/Grade/3ef4974212ff485b98f1b2c5efc73679    
+   :target: https://www.codacy.com/gh/TimSamuelsen/CLIP3DPrinterGUI/dashboardutm_source=github.com&amp;utm_medium=referral&amp;utm_content=TimSamuelsen/CLIP3DPrinterGUI&amp;utm_campaign=Badge_Grade
+   
 Welcome to the CLIP3DGUI Documentation!
 ==================================================
 CLIP3DGUI is print control software developed for the DeSimone Research Group in-house 
