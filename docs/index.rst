@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 .. image:: https://i.imgur.com/7DLm4m2.png
 
-.. image:: https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+.. image:: https://img.shields.io/badge/License-GPLv3-blue.svg
    :target: https://github.com/TimSamuelsen/CLIP3DPrinterGUI/blob/master/LICENSE
    :alt: Project License
    
