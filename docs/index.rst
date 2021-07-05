@@ -25,8 +25,9 @@ custom software solution that integrates all the features required to perform th
 Currently some of the information on this website is withheld pending publishing of research.
 
 * **Free software:** GPLv3 License
+* **Qt Version:** 6.1.1
 * **Github repository:** https://github.com/TimSamuelsen/CLIP3DPrinterGUI
-* **Qt Version:** 5.15.2
+* **Lab:** https://desimonegroup.stanford.edu/
 
 .. toctree::
    :maxdepth: 2
