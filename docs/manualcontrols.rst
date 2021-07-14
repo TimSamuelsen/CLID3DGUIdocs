@@ -5,7 +5,7 @@ Manual Controls
 
 Manual Stage Control
 ---------------------------
-.. figure:: https://i.imgur.com/HMhMSMZ.png
+.. figure:: images/manualstagecontrol.PNG
     :align: right
     :figwidth: 400px
 
@@ -22,7 +22,7 @@ Manual Stage Control
 Manual Pump Control
 ---------------------------
 
-.. figure:: https://i.imgur.com/UQG5vKG.png
+.. figure:: images/manualpumpcontrol.PNG
     :align: right
     :figwidth: 400px
     
