@@ -1,7 +1,7 @@
 ==============
 User Interface
 ==============
-.. image:: images/mainwindow.JPG
+.. image:: images/mainwindow.png
     :width: 1600px
 
 Print Customization
