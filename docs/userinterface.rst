@@ -1,7 +1,7 @@
 ==============
 User Interface
 ==============
-.. image:: https://i.imgur.com/J2kAatK.png
+.. image:: images/mainwindow.JPG
     :width: 1600px
 
 Print Customization
