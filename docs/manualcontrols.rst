@@ -7,7 +7,7 @@ Manual Stage Control
 ---------------------------
 .. figure:: images/manualstagecontrol.PNG
     :align: right
-    :figwidth: 400px
+    :figwidth: 300px
 
 **Current Stage Position:**
 
@@ -24,7 +24,7 @@ Manual Pump Control
 
 .. figure:: images/manualpumpcontrol.PNG
     :align: right
-    :figwidth: 400px
+    :figwidth: 300px
     
 **Select Target:**
 
