@@ -18,17 +18,23 @@ An example print script is included on the left side below with exposure time va
 LED intensity values ranging from 21-30 and dark time ranging from 31-40. The example print script was generated in
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
-.. list-table:: Title
-   :widths: 15 15 15 15 15 15 15
-   :header-rows: 0
+.. list-table:: Print Script Order and Units
+   :widths: 20 20 20 20 20 20 20
+   :header-rows: 1
 
-   * - Exposure Time (ms)
+   * - Exposure Time
      - LED Intensity
-     - Dark Time (ms)
-     - Layer Thickness (μm)
-     - Stage Velocity (mm/s)
-     - Stage Acceleration (mm/s^2)
-     - Pump Height (μm)
+     - Dark Time
+     - Layer Thickness
+     - Stage Velocity
+     - Stage Acceleration
+     - Pump Height
+   * - ms
+     - 1-255
+     - ms
+     - μm
+     - mm/s
+     - mm/s^2
 
 .. |logo1| image:: https://i.imgur.com/UB2vqhL.png
     :scale: 60%
