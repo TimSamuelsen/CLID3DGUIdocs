@@ -37,10 +37,10 @@ Excel and saved as a .csv file, the image below on the right side displays the e
      - mm/s^2
      - μm
 
-.. |logo1| image:: https://i.imgur.com/UB2vqhL.png
+.. |logo1| image:: images/printscriptcsvCLIP.PNG
     :scale: 60%
 
-.. |logo2| image:: https://i.imgur.com/J1b4koi.png
+.. |logo2| image:: images/printscriptexcelCLIP.PNG
     :scale: 60%
 
 .. table:: 30 μm CLIP print script (exp time, LED intensity, dark time)
@@ -82,10 +82,10 @@ Excel and saved as a .csv file, the image below on the right side displays the e
      - μl
      - μl/s
 
-.. |logo3| image:: https://i.imgur.com/pHoKDPa.png
+.. |logo3| image:: images/printscriptcsviCLIP.PNG
     :scale: 60%
 
-.. |logo4| image:: https://i.imgur.com/1I76b2v.png
+.. |logo4| image:: images/printscriptexceliCLIP.PNG
     :scale: 60%
 
 .. table:: iCLIP print script (exp time, LED intensity, dark time, inj vol, inj rate)
