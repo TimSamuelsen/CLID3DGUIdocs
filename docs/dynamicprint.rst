@@ -19,7 +19,7 @@ LED intensity values ranging from 21-30 and dark time ranging from 31-40. The ex
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
 .. list-table:: Print Script Order and Units
-   :widths: 20 20 20 20 20 20 20
+   :widths: 12 12 12 12 12 12 12
    :header-rows: 1
 
    * - Exposure Time
