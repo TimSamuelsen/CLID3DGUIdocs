@@ -20,7 +20,7 @@ Excel and saved as a .csv file, the image below on the right side displays the e
 
 .. list-table:: Title
    :widths: 15 15 15 15 15 15 15
-   :header-rows: 1
+   :header-rows: 0
 
    * - Exposure Time (ms)
      - LED Intensity
