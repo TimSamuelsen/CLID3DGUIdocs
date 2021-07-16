@@ -59,6 +59,29 @@ LED intensity values ranging from 21-30, dark time ranging from 31-40, injection
 and injection rate ranging from 51-60. The example print script was generated in
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
+.. list-table:: Print Script Order and Units
+   :widths: 12 12 12 12 12 12 12 12 12
+   :header-rows: 1
+
+   * - Exposure Time
+     - LED Intensity
+     - Dark Time
+     - Layer Thickness
+     - Stage Velocity
+     - Stage Acceleration
+     - Pump Height
+     - Injection Vol.
+     - Injection Rate
+   * - ms
+     - 1-255
+     - ms
+     - μm
+     - mm/s
+     - mm/s^2
+     - μm
+     - μl
+     - μl/s
+
 .. |logo3| image:: https://i.imgur.com/pHoKDPa.png
     :scale: 60%
 
