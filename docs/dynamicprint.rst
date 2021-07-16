@@ -35,6 +35,7 @@ Excel and saved as a .csv file, the image below on the right side displays the e
      - μm
      - mm/s
      - mm/s^2
+     - μm
 
 .. |logo1| image:: https://i.imgur.com/UB2vqhL.png
     :scale: 60%
