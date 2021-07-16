@@ -22,12 +22,12 @@ Excel and saved as a .csv file, the image below on the right side displays the e
    :widths: 12 12 12 12 12 12 12
    :header-rows: 1
 
-   * - Exposure Time
-     - LED Intensity
+   * - Exp Time
+     - LED Int
      - Dark Time
-     - Layer Thickness
-     - Stage Velocity
-     - Stage Acceleration
+     - Layer
+     - Velocity
+     - Acceleration
      - Pump Height
    * - ms
      - 1-255
@@ -63,15 +63,15 @@ Excel and saved as a .csv file, the image below on the right side displays the e
    :widths: 12 12 12 12 12 12 12 12 12
    :header-rows: 1
 
-   * - Exposure Time
-     - LED Intensity
+   * - Exp Time
+     - LED Int
      - Dark Time
-     - Layer Thickness
-     - Stage Velocity
-     - Stage Acceleration
+     - Layer
+     - Velocity
+     - Acceleration
      - Pump Height
-     - Injection Vol.
-     - Injection Rate
+     - Inj Vol
+     - Inj Rate
    * - ms
      - 1-255
      - ms
