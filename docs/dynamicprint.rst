@@ -14,8 +14,8 @@ The print script is used to dynamically control print parameters on a layer by l
 ---------------------------
 
 The 30 μm printer can control the exposure time (ms), LED intensity, and dark time (ms) as dynamic variables. 
-An example print script is included on the left side below with exposure time values ranging from 11-20, 
-LED intensity values ranging from 21-30 and dark time ranging from 31-40. The example print script was generated in
+An example print script is included on the left side below with exposure time values ranging from 1-10, 
+LED intensity values ranging from 11-20, dark time ranging from 21-30, layer thickness ranging from 31-40, stage velocity ranging from 41-50, stage acceleration ranging from 51-60, and pump height ranging from 61-70. The example print script was generated in
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
 .. list-table:: Print Script Order and Units
@@ -54,9 +54,8 @@ iCLIP printer
 ---------------------------
 The iCLIP printer can control the exposure time (ms), LED intensity, dark time (ms), injection volume per layer
 (μl), and injection rate (μl/s) as dynamic variables. 
-An example print script is included on the left side below with the exposure time values ranging from 11-20, 
-LED intensity values ranging from 21-30, dark time ranging from 31-40, injection volume ranging from 41-50, 
-and injection rate ranging from 51-60. The example print script was generated in
+An example print script is included on the left side below with exposure time values ranging from 1-10, 
+LED intensity values ranging from 11-20, dark time ranging from 21-30, layer thickness ranging from 31-40, stage velocity ranging from 41-50, stage acceleration ranging from 51-60, pump height ranging from 61-70, injection volume ranging from 71-80, and injection rate ranging from 81-90. The example print script was generated in
 Excel and saved as a .csv file, the image below on the right side displays the example table in excel.
 
 .. list-table:: Print Script Order and Units
