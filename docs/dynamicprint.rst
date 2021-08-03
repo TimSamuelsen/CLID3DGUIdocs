@@ -50,9 +50,9 @@ Excel and saved as a .csv file, the image below on the right side displays the e
    | |logo1| | |logo2| |
    +---------+---------+
 
-iCLIP printer
+Others printers
 ---------------------------
-The iCLIP printer can control the exposure time (ms), LED intensity, dark time (ms), injection volume per layer
+Other printers can control the exposure time (ms), LED intensity, dark time (ms), injection volume per layer
 (μl), and injection rate (μl/s) as dynamic variables. 
 An example print script is included on the left side below with exposure time values ranging from 1-10, 
 LED intensity values ranging from 11-20, dark time ranging from 21-30, layer thickness ranging from 31-40, stage velocity ranging from 41-50, stage acceleration ranging from 51-60, pump height ranging from 61-70, injection volume ranging from 71-80, and injection rate ranging from 81-90. The example print script was generated in
@@ -87,7 +87,7 @@ Excel and saved as a .csv file, the image below on the right side displays the e
 .. |logo4| image:: images/PrintScriptExceliCLIP.PNG
     :scale: 60%
 
-.. table:: iCLIP print script (exp time, LED intensity, dark time, inj vol, inj rate)
+.. table:: Alternative print script (exp time, LED intensity, dark time, inj vol, inj rate)
    :align: center
 
    +---------+---------+
