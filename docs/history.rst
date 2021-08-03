@@ -56,4 +56,4 @@ The project was in the prototyping phase from 01/17/2021-03/24/2021.
 0.3 (2021-06-25)
 ------------------
 
-* **NEW:** iCLIP printer support
+* **NEW:** Second printer support
