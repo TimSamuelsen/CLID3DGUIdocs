@@ -23,7 +23,7 @@ Select between a standard CLIP printer and other printers.
 General Print Settings
 ---------------------------
 
-.. figure:: images/ui-general-print-settings
+.. figure:: images/ui-general-print-settings.png
     :align: right
     :figwidth: 300px
 	
@@ -54,7 +54,7 @@ The print script is used to dynamically control print variables on a layer by la
 Light Engine Control
 ---------------------------
 
-.. figure:: images/ui-general-print-settings
+.. figure:: images/ui-light-engine-control.png
     :align: right
     :figwidth: 300px
 
@@ -106,15 +106,16 @@ More details to come upon publication of research.
 
 Image Files
 ------------------------
-.. figure:: images/ui-image-files.png
+.. figure:: images/ui-image-files.PNG
     :align: right
     :figwidth: 300px
+	
 Object image files are selected here. Make sure your image files are located in the same file and named alphabetically
 the software will sort the files alphabetically as they are uploaded to the light engine.
 
 Terminal Output
 -------------------
-.. figure:: images/ui-terminal-log
+.. figure:: images/ui-terminal-log.PNG
     :align: right
     :figwidth: 300px
 
@@ -144,7 +145,7 @@ The abort button acts as an emergency stop, click abort if something is going wr
 
 Peripheral Connections
 ---------------------------
-.. figure:: images/ui-peripheral-connections.png
+.. figure:: images/ui-peripheral-connections.PNG
     :align: right
     :figwidth: 300px
 
@@ -162,7 +163,7 @@ The pump connects in a similar manner to the stage. Select the correct COM port 
 
 Popout Windows
 ---------------------------
-.. figure:: images/popout-windows
+.. figure:: images/popout-windows.png
     :align: right
     :figwidth: 300px
 

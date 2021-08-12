@@ -1,41 +1,37 @@
-Template
-========
+.. image:: https://i.imgur.com/7DLm4m2.png
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+Welcome to the CLIP3DGUI Documentation!
+==================================================
 
-Look how easy it is to use:
+.. image:: https://img.shields.io/badge/License-GPLv3-blue.svg
+   :target: https://github.com/TimSamuelsen/CLIP3DPrinterGUI/blob/master/LICENSE
+   :alt: Project License
+   
+.. image:: https://app.codacy.com/project/badge/Grade/3ef4974212ff485b98f1b2c5efc73679    
+   :target: https://app.codacy.com/gh/TimSamuelsen/CLIP3DPrinterGUI/dashboard
+   :alt: Codacy code quality grade
+   
+.. image:: https://readthedocs.org/projects/clip3dgui/badge/?version=latest
+   :target: https://clip3dgui.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
+CLIP3DGUI is print control software developed for the DeSimone Research Group in-house 
+CLIP 3D printers at Stanford University. It is designed to provide lab members with a fully
+custom software solution that integrates all the features required to perform their experiments.
 
-Features
---------
-
-- Be awesome
-- Make things faster
+* **Free software:** GPLv3 License
+* **Qt Version:** 6.0
+* **Docs:** https://clip3dgui.readthedocs.io/
+* **Lab:** https://desimonegroup.stanford.edu/
 
 Installation
 ------------
 
-Install $project by running:
-
-    install project
-
-Contribute
-----------
-
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
-
 Support
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+If you are having issues please contact: tim.samuelsen@gmail.com
 
 License
 -------
-
-The project is licensed under the BSD license.
+CLIP3DGUI is licensed under the GPLv3 license.
