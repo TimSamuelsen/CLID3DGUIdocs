@@ -56,6 +56,7 @@ Currently some of the information on this website is withheld pending publishing
 	
 	
 .. doxygenclass:: MainWindow
+	:project: src
 	:members:
    
 Indices and tables
