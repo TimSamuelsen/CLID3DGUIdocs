@@ -21,33 +21,12 @@ import subprocess
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('.'))
 
-def run_doxygen(folder):
-    """Run the doxygen make command in the designated folder"""
+# on_rtd is whether we are on readthedocs.org
+read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 
-    try:
-        retcode = subprocess.call("cd %s; make" % folder, shell=True)
-        if retcode < 0:
-            sys.stderr.write("doxygen terminated by signal %s" % (-retcode))
-    except OSError as e:
-        sys.stderr.write("doxygen execution failed: %s" % e)
+if read_the_docs_build:
 
-
-def generate_doxygen_xml(app):
-    """Run the doxygen make commands if we're on the ReadTheDocs server"""
-
-    read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
-
-    if read_the_docs_build:
-
-        run_doxygen("../../examples/doxygen")
-        run_doxygen("../../examples/specific")
-        run_doxygen("../../examples/tinyxml")
-
-
-def setup(app):
-
-    # Add hook for building doxygen xml when needed
-    app.connect("builder-inited", generate_doxygen_xml)
+    subprocess.call('cd ../doxygen; doxygen', shell=True)
 
 # -- General configuration ------------------------------------------------
 
@@ -292,5 +271,5 @@ texinfo_documents = [
 
 # -- Extension configuration -------------------------------------------------
 
-breathe_projects = { "CLIP3DGUI": "doxyxml/" }
+breathe_projects = { "CLIP3DGUI": "_doxygen/xml" }
 breathe_default_project = "CLIP3DGUI"
