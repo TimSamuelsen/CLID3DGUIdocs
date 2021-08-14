@@ -49,6 +49,7 @@ Currently some of the information on this website is withheld pending publishing
    manualcontrols
    
 .. doxygenclass:: MainWindow
+	:project: mainwindow
 	:members:
    
 Indices and tables
