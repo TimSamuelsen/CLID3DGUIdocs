@@ -3,5 +3,5 @@ Main Window
 ============
 
 .. doxygenclass:: MainWindow
-	:project: source
+	:project: src
 	:members:
