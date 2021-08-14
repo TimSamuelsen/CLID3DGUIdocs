@@ -48,6 +48,9 @@ Currently some of the information on this website is withheld pending publishing
    imageprocessing
    manualcontrols
    
+.. doxygenclass:: MainWindow
+	:members:
+   
 Indices and tables
 ==================
 
