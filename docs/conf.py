@@ -292,4 +292,5 @@ texinfo_documents = [
 
 # -- Extension configuration -------------------------------------------------
 
-breathe_projects = { 'src': '_doxygen/xml' }
+breathe_projects = { "CLIP3DGUI": "doxyxml/" }
+breathe_default_project = "CLIP3DGUI"
