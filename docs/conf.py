@@ -292,4 +292,4 @@ texinfo_documents = [
 
 # -- Extension configuration -------------------------------------------------
 
-breathe_projects = { 'src': '_doxygen/xml' }
+breathe_projects = { 'source': '_doxygen/xml' }

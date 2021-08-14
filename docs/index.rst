@@ -53,11 +53,6 @@ Currently some of the information on this website is withheld pending publishing
 	:caption: API Reference
 	
 	api/mainwindow
-	
-	
-.. doxygenclass:: MainWindow
-	:project: src
-	:members:
    
 Indices and tables
 ==================
