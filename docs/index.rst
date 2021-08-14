@@ -48,8 +48,14 @@ Currently some of the information on this website is withheld pending publishing
    imageprocessing
    manualcontrols
    
+.. toctree::
+	:maxdepth: 2
+	:caption: API Reference
+	
+	api/mainwindow
+	
+	
 .. doxygenclass:: MainWindow
-	:project: mainwindow
 	:members:
    
 Indices and tables
