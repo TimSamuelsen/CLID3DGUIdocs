@@ -28,7 +28,6 @@ DLP9000& DLP = DLP9000::Instance();
 StageCommands& Stage = StageCommands::Instance();
 PumpCommands& Pump = PumpCommands::Instance();
 
-static QStringList ImageList;
 //Auto parameter selection mode
 static double PrintSpeed;
 static double PrintHeight;
@@ -47,8 +46,8 @@ static int VP8Bit = OFF;
 QStringList FrameList;
 
 /*!
- * @brief MainWindow::MainWindow
- * @param parent
+ * \brief MainWindow::MainWindow
+ * \param parent
  * Creates the mainwindow, gets current time for print log,
  * loads and initializes saved settings and initializes plot
  */
@@ -59,7 +58,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui = (new Ui::MainWindow);
     ui->setupUi(this);
 
-    //
     //ManualStageControl * pStage = new ManualStageControl;
     QObject::connect(&Stage, SIGNAL(StagePrintSignal(QString)), this, SLOT(PrintToTerminal(QString)));
     QObject::connect(&Stage, SIGNAL(StageError(QString)), this, SLOT(showError(QString)));
@@ -82,8 +80,8 @@ MainWindow::MainWindow(QWidget *parent) :
     initPlot(); //initiallize the plot window
 }
 
-/**
- * @brief MainWindow::~MainWindow
+/*!
+ * \brief MainWindow::~MainWindow
  * Called when the main window is closed
  */
 MainWindow::~MainWindow()
@@ -92,8 +90,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-/**
- * @brief MainWindow::on_ManualStage_clicked
+/*!
+ * \brief MainWindow::on_ManualStage_clicked
  * Open the manual stage control window, sends home
  * command to stage and closes mainwindow connection
  */
@@ -114,12 +112,12 @@ void MainWindow::on_ManualStage_clicked()
     ui->StageConnectionIndicator->setText("Manual Control"); //Set text on indicator to indicate in manual stage control
 }
 
-/**
- * @brief MainWindow::on_pushButton_clicked
+/*!
+ * \brief MainWindow::on_pushButton_clicked
  * Opens the Manual Pump Control window and closes the mainwindow
  * pump connection
  */
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_ManualPumpControl_clicked()
 {
     //Create new manual pump control window
     ManualPumpUI = new manualpumpcontrol();
@@ -129,8 +127,8 @@ void MainWindow::on_pushButton_clicked()
     Pump.PumpSerial.closeDevice(); //Closes main window pump connection to allow manual pump control to take over
 }
 
-/**
- * @brief MainWindow::on_ImageProcess_clicked
+/*!
+ * \brief MainWindow::on_ImageProcess_clicked
  * Opens the image processing window
  */
 void MainWindow::on_ImageProcess_clicked()
@@ -141,8 +139,8 @@ void MainWindow::on_ImageProcess_clicked()
     PrintToTerminal("Opening Image Processing");
 }
 
-/**
- * @brief MainWindow::on_GetPosition_clicked
+/*!
+ * \brief MainWindow::on_GetPosition_clicked
  * Gets position, saves it in module level variable GetPosition,
  * updates slider and prints to terminal window
  */
@@ -170,8 +168,8 @@ void MainWindow::on_GetPosition_clicked()
 }
 
 /*********************************************Mode Selection*********************************************/
-/**
- * @brief MainWindow::on_POTFcheckbox_clicked
+/*!
+ * \brief MainWindow::on_POTFcheckbox_clicked
  * Sets projection mode to POTF
  */
 void MainWindow::on_POTFcheckbox_clicked()
@@ -187,8 +185,8 @@ void MainWindow::on_POTFcheckbox_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_VP_HDMIcheckbox_clicked
+/*!
+ * \brief MainWindow::on_VP_HDMIcheckbox_clicked
  * Sets projection mode to Video Pattern
  */
 void MainWindow::on_VP_HDMIcheckbox_clicked()
@@ -215,8 +213,8 @@ void MainWindow::on_VP_HDMIcheckbox_clicked()
     }
 }
 
-/**
- * @brief MainWindow::Check4VideoLock
+/*!
+ * \brief MainWindow::Check4VideoLock
  * Validates that the video source is locked, this is needed for Video Pattern Mode
  */
 void MainWindow::Check4VideoLock()
@@ -279,8 +277,8 @@ void MainWindow::Check4VideoLock()
     }
 }
 
-/**
- * @brief MainWindow::initImagePopout
+/*!
+ * \brief MainWindow::initImagePopout
  * Initializes the image popout window that is used for video pattern mode
  */
 void MainWindow::initImagePopout()
@@ -301,8 +299,8 @@ void MainWindow::initImagePopout()
     }
 }
 
-/**
- * @brief MainWindow::on_DICLIPSelect_clicked
+/*!
+ * \brief MainWindow::on_DICLIPSelect_clicked
  * Preps the system for use with iCLIP printer
  */
 void MainWindow::on_DICLIPSelect_clicked()
@@ -325,8 +323,8 @@ void MainWindow::on_DICLIPSelect_clicked()
     EnableParameter(MIN_END, OFF);
 }
 
-/**
- * @brief MainWindow::on_CLIPSelect_clicked
+/*!
+ * \brief MainWindow::on_CLIPSelect_clicked
  * Preps the system for use with the 30 um printer
  */
 void MainWindow::on_CLIPSelect_clicked()
@@ -350,8 +348,8 @@ void MainWindow::on_CLIPSelect_clicked()
 }
 
 
-/**
- * @brief MainWindow::on_SetBitDepth_clicked
+/*!
+ * \brief MainWindow::on_SetBitDepth_clicked
  * Sets the module variable BitMode which is used to determine the bit depth
  * the user wishes to print with
  */
@@ -361,8 +359,8 @@ void MainWindow::on_SetBitDepth_clicked()
     PrintToTerminal("Bit-Depth set to: " + QString::number(m_PrintSettings.BitMode));
 }
 
-/**
- * @brief MainWindow::on_SteppedMotion_clicked
+/*!
+ * \brief MainWindow::on_SteppedMotion_clicked
  * Sets motion mode to stepped, this is the default
  */
 void MainWindow::on_SteppedMotion_clicked()
@@ -377,8 +375,8 @@ void MainWindow::on_SteppedMotion_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_ContinuousMotion_clicked
+/*!
+ * \brief MainWindow::on_ContinuousMotion_clicked
  * Sets motion mode to continuous
  */
 void MainWindow::on_ContinuousMotion_clicked()
@@ -397,8 +395,8 @@ void MainWindow::on_ContinuousMotion_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_pumpingCheckBox_clicked
+/*!
+ * \brief MainWindow::on_pumpingCheckBox_clicked
  * Enables pumping mode in which the stage movement is exaggerated
  * to avoid the part sticking to the window
  */
@@ -421,8 +419,8 @@ void MainWindow::on_pumpingCheckBox_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_setPumping_clicked
+/*!
+ * \brief MainWindow::on_setPumping_clicked
  * Sets the pumping depth parameter
  */
 void MainWindow::on_setPumping_clicked()
@@ -440,8 +438,8 @@ void MainWindow::on_setPumping_clicked()
 
 
 /*********************************************File Handling*********************************************/
-/**
- * @brief MainWindow::on_SelectFile_clicked
+/*!
+ * \brief MainWindow::on_SelectFile_clicked
  * Select all object image files to project
  */
 void MainWindow::on_SelectFile_clicked()
@@ -465,8 +463,8 @@ void MainWindow::on_SelectFile_clicked()
     PrintToTerminal(QString::number(SliceCount) + " Images Currently Selected");
 }
 
-/**
- * @brief MainWindow::on_LogFileBrowse_clicked
+/*!
+ * \brief MainWindow::on_LogFileBrowse_clicked
  * Select directory to store log files
  */
 void MainWindow::on_LogFileBrowse_clicked()
@@ -475,8 +473,8 @@ void MainWindow::on_LogFileBrowse_clicked()
     ui->LogFileLocation->setText(LogFileDestination);
 }
 
-/**
- * @brief MainWindow::on_ClearImageFiles_clicked
+/*!
+ * \brief MainWindow::on_ClearImageFiles_clicked
  * Clear image files selected
  */
 void MainWindow::on_ClearImageFiles_clicked()
@@ -484,8 +482,8 @@ void MainWindow::on_ClearImageFiles_clicked()
     ui->FileList->clear();
 }
 
-/**
- * @brief MainWindow::on_UsePrintScript_clicked
+/*!
+ * \brief MainWindow::on_UsePrintScript_clicked
  * Used to select whether to use set print variables or print script
  */
 void MainWindow::on_UsePrintScript_clicked()
@@ -526,8 +524,8 @@ void MainWindow::on_UsePrintScript_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_SelectPrintScript_clicked
+/*!
+ * \brief MainWindow::on_SelectPrintScript_clicked
  * User selects print script from file, the print script is parsed
  * and the exposure time and LED intensity is stored in
  * module level QStringLists: ExposureScriptList and LEDScriptList
@@ -600,8 +598,8 @@ void MainWindow::on_SelectPrintScript_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_ClearPrintScript_clicked
+/*!
+ * \brief MainWindow::on_ClearPrintScript_clicked
  * Clears selected print list
  */
 void MainWindow::on_ClearPrintScript_clicked()
@@ -609,8 +607,8 @@ void MainWindow::on_ClearPrintScript_clicked()
     ui->PrintScriptFile->clear();
 }
 /*******************************************Peripheral Connections*********************************************/
-/**
- * @brief MainWindow::on_LightEngineConnectButton_clicked
+/*!
+ * \brief MainWindow::on_LightEngineConnectButton_clicked
  * Connect to light engine, gets last error code to validate that
  * no errors have occured and connection is working
  */
@@ -640,8 +638,8 @@ void MainWindow::on_LightEngineConnectButton_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_StageConnectButton_clicked
+/*!
+ * \brief MainWindow::on_StageConnectButton_clicked
  * Connects to stage, if succesful gets position, sends
  * home commands and gets position
  */
@@ -667,8 +665,8 @@ void MainWindow::on_StageConnectButton_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_PumpConnectButton_clicked
+/*!
+ * \brief MainWindow::on_PumpConnectButton_clicked
  * Connects to pump
  */
 void MainWindow::on_PumpConnectButton_clicked()
@@ -692,8 +690,8 @@ void MainWindow::on_PumpConnectButton_clicked()
 }
 
 /*********************************************Print Parameters*********************************************/
-/**
- * @brief MainWindow::on_ResinSelect_activated
+/*!
+ * \brief MainWindow::on_ResinSelect_activated
  * @param arg1: The resin selected
  * Prints the resin selected to the terminal
  */
@@ -702,8 +700,8 @@ void MainWindow::on_ResinSelect_activated(const QString &arg1)
     PrintToTerminal(arg1 + " Selected");
 }
 
-/**
- * @brief MainWindow::on_AutoCheckBox_stateChanged
+/*!
+ * \brief MainWindow::on_AutoCheckBox_stateChanged
  * @param arg1: The state of the AutoCheckBox
  * If AutoCheckBox is set, go into auto mode
  */
@@ -755,8 +753,8 @@ void MainWindow::on_AutoCheckBox_stateChanged(int arg1)
     }
 }
 
-/**
- * @brief MainWindow::on_AutoCheckBox_clicked
+/*!
+ * \brief MainWindow::on_AutoCheckBox_clicked
  * Guard on edge case that sets the checkbox while it's actual state is unchecked
  */
 void MainWindow::on_AutoCheckBox_clicked()
@@ -767,8 +765,8 @@ void MainWindow::on_AutoCheckBox_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_SetMaxImageUpload_clicked
+/*!
+ * \brief MainWindow::on_SetMaxImageUpload_clicked
  * Sets the max image upload, used to avoid large error buildup
  * or large wait times due to large uploads
  */
@@ -793,8 +791,8 @@ void MainWindow::on_SetMaxImageUpload_clicked()
 }
 
 
-/**
- * @brief MainWindow::on_setPrintSpeed_clicked
+/*!
+ * \brief MainWindow::on_setPrintSpeed_clicked
  * Sets PrintSpeed variable from value inputted by user, also triggers automode
  */
 void MainWindow::on_setPrintSpeed_clicked()
@@ -804,8 +802,8 @@ void MainWindow::on_setPrintSpeed_clicked()
     AutoMode();
 }
 
-/**
- * @brief MainWindow::on_SetPrintHeight_clicked
+/*!
+ * \brief MainWindow::on_SetPrintHeight_clicked
  * Sets PrintHeight variable from value inputted by user, also triggers automode
  */
 void MainWindow::on_SetPrintHeight_clicked()
@@ -815,8 +813,8 @@ void MainWindow::on_SetPrintHeight_clicked()
     AutoMode();
 }
 
-/**
- * @brief MainWindow::on_SetIntialAdhesionTimeButton_clicked
+/*!
+ * \brief MainWindow::on_SetIntialAdhesionTimeButton_clicked
  * Sets InitialExposure variable from the value inputted by the user
  */
 void MainWindow::on_SetIntialAdhesionTimeButton_clicked()
@@ -825,8 +823,8 @@ void MainWindow::on_SetIntialAdhesionTimeButton_clicked()
     PrintToTerminal("Set Initial Exposure to: " + QString::number(m_PrintSettings.InitialExposure) + " s");
 }
 
-/**
- * @brief MainWindow::on_SetStartingPosButton_clicked
+/*!
+ * \brief MainWindow::on_SetStartingPosButton_clicked
  * Sets Starting Position variable from the value inputted by the user
  * (also doubles as debug tool for GetPosition(), will be removed)
  */
@@ -840,8 +838,8 @@ void MainWindow::on_SetStartingPosButton_clicked()
     ui->CurrentPositionIndicator->setText(CurrentPosition);
 }
 
-/**
- * @brief MainWindow::on_SetSliceThickness_clicked
+/*!
+ * \brief MainWindow::on_SetSliceThickness_clicked
  * Sets m_PrintSettings.LayerThickness variable from the value inputted by the user
  */
 void MainWindow::on_SetSliceThickness_clicked()
@@ -850,8 +848,8 @@ void MainWindow::on_SetSliceThickness_clicked()
     PrintToTerminal("Set Slice Thickness to: " + QString::number(m_PrintSettings.LayerThickness*1000) + " μm");
 }
 /*******************************************Stage Parameters********************************************/
-/**
- * @brief MainWindow::on_SetStageVelocity_clicked
+/*!
+ * \brief MainWindow::on_SetStageVelocity_clicked
  * Sets StageVelocity variable from the value inputted by the user,
  * also directly sends command to stage to set velocity
  */
@@ -862,8 +860,8 @@ void MainWindow::on_SetStageVelocity_clicked()
     PrintToTerminal("Set Stage Velocity to: " + QString::number(m_PrintSettings.StageVelocity) +" mm/s");
 }
 
-/**
- * @brief MainWindow::on_SetStageAcceleration_clicked
+/*!
+ * \brief MainWindow::on_SetStageAcceleration_clicked
  * Sets StageAcceleration variable from the value inputted by the user,
  * also directly sends command to stage to set acceleration
  */
@@ -874,8 +872,8 @@ void MainWindow::on_SetStageAcceleration_clicked()
     PrintToTerminal("Set Stage Acceleration to: " + QString::number(m_PrintSettings.StageAcceleration) + " mm/s");
 }
 
-/**
- * @brief MainWindow::on_SetMaxEndOfRun_clicked
+/*!
+ * \brief MainWindow::on_SetMaxEndOfRun_clicked
  * Sets MaxEndOfRun variable from the value inputted by the user,
  * also directly sends command to stage to set max end of run
  */
@@ -886,8 +884,8 @@ void MainWindow::on_SetMaxEndOfRun_clicked()
     PrintToTerminal("Set Max End Of Run to: " + QString::number(m_PrintSettings.MaxEndOfRun) + " mm");
 }
 
-/**
- * @brief MainWindow::on_SetMinEndOfRun_clicked
+/*!
+ * \brief MainWindow::on_SetMinEndOfRun_clicked
  * Sets MinEndOfRun variable from the value inputted by the user,
  * also directly sends command to stage to set min end of run
  */
@@ -899,8 +897,8 @@ void MainWindow::on_SetMinEndOfRun_clicked()
 }
 
 /******************************************Light Engine Parameters********************************************/
-/**
- * @brief MainWindow::on_SetDarkTime_clicked
+/*!
+ * \brief MainWindow::on_SetDarkTime_clicked
  * Sets DarkTime variable from the value selected by the user
  */
 void MainWindow::on_SetDarkTime_clicked()
@@ -909,8 +907,8 @@ void MainWindow::on_SetDarkTime_clicked()
     PrintToTerminal("Set Dark Time to: " + QString::number(m_PrintSettings.DarkTime/1000) + " ms");
 }
 
-/**
- * @brief MainWindow::on_SetExposureTime_clicked
+/*!
+ * \brief MainWindow::on_SetExposureTime_clicked
  * Sets ExposureTime variable from the value selected by the user
  */
 void MainWindow::on_SetExposureTime_clicked()
@@ -919,8 +917,8 @@ void MainWindow::on_SetExposureTime_clicked()
     PrintToTerminal("Set Exposure Time to: " + QString::number(m_PrintSettings.ExposureTime/1000) + " ms");
 }
 
-/**
- * @brief MainWindow::on_SetUVIntensity_clicked
+/*!
+ * \brief MainWindow::on_SetUVIntensity_clicked
  * Sets UVIntensity from the value selected by the user
  */
 void MainWindow::on_SetUVIntensity_clicked()
@@ -929,8 +927,9 @@ void MainWindow::on_SetUVIntensity_clicked()
     PrintToTerminal("Set UV Intensity to: " + QString::number(m_PrintSettings.UVIntensity));
 }
 /*******************************************Pump Parameters********************************************/
-/**
- * @brief MainWindow::on_ContinuousInjection_clicked
+/*!
+ * \brief MainWindow::on_ContinuousInjection_clicked
+ * Enables continuous injection throughout the print
  */
 void MainWindow::on_ContinuousInjection_clicked()
 {
@@ -945,8 +944,9 @@ void MainWindow::on_ContinuousInjection_clicked()
     }
 }
 
-/**
- * @brief MainWindow::on_SetInfuseRate_clicked
+/*!
+ * \brief MainWindow::on_SetInfuseRate_clicked
+ * Sets the infuse rate
  */
 void MainWindow::on_SetInfuseRate_clicked()
 {
@@ -1895,7 +1895,7 @@ void MainWindow::on_LiveValueList6_activated(const QString &arg1)
     PrintToTerminal("LV6: " + arg1);
 }
 /*************************************************************
- * ********************Graveyard***************************
+ * ********************Print Process Handling***************************
  * ***********************************************************/
 //Snippets that may be useful in the future but the overall functionality has been deprecated
 /**
@@ -1940,7 +1940,6 @@ void MainWindow::on_StartPrint_clicked()
     if (ValidateSettings() == true){
         PrintToTerminal("Entering Printing Procedure");
         PrintStartTime = QTime::currentTime(); //Get print start time from current time
-        ImageList = GetImageList(m_PrintControls, m_PrintSettings);
 
         PrintControl.StartPrint(m_PrintSettings, m_PrintScript, m_InjectionSettings);
         PrintProcess();
