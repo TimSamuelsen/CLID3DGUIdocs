@@ -1,5 +1,7 @@
 PROJECT_NAME     = "ReadTheDocs-Breathe Barebones"
 XML_OUTPUT       = doxyxml
+EXTRACT_PRIVATE = YES
+HIDE_UNDOC_MEMBERS = YES
 GENERATE_LATEX   = NO
 GENERATE_MAN     = NO
 GENERATE_RTF     = NO

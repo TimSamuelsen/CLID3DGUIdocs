@@ -1,7 +1,7 @@
 ============
 Main Window
 ============
-This documentation is under construction.
+This documentation was generated with doxygen + breathe and is under construction.
 
 .. doxygenclass:: MainWindow
 	:members:
