@@ -14,7 +14,7 @@
 /*!
  * \brief DLP9000::InitProjector
  * Initializes connection to the projector.
- * \return Returns true if connection was succesful, false otherwise
+ * \return - Returns true if connection was succesful, false otherwise
  */
 bool DLP9000::InitProjector(void)
 {
@@ -33,10 +33,10 @@ bool DLP9000::InitProjector(void)
 /*!
  * \brief DLP9000::AddPatterns
  * Prepares patterns and stores them in program memory prior to upload.
- * \param fileNames A list of file locations for images to be uploaded
- * \param m_PrintSettings Module print settings, using BitMode, ProjectionMode, ExposureTime, and DarkTime
- * \param m_PrintScripts Module print scripts, using ExposureTimeScript and DarkTimeScript
- * \param m_PrintControls Module print controls, using layerCount and InitialExposureFlag
+ * \param fileNames - A list of file locations for images to be uploaded
+ * \param m_PrintSettings - Module print settings, using BitMode, ProjectionMode, ExposureTime, and DarkTime
+ * \param m_PrintScripts - Module print scripts, using ExposureTimeScript and DarkTimeScript
+ * \param m_PrintControls - Module print controls, using layerCount and InitialExposureFlag
  */
 void DLP9000::AddPatterns(QStringList fileNames, PrintSettings m_PrintSettings, PrintScripts m_PrintScripts, PrintControls m_PrintControls)
 {
@@ -222,8 +222,8 @@ void DLP9000::AddPatterns(QStringList fileNames, PrintSettings m_PrintSettings, 
  * \brief DLP9000::UpdatePatternMemory
  * Creates Splash images from all the Pattern elements.
  * Converts the splash images to splash blocks and uploads pattern images.
- * \param totalSplashImages Total number of Splash images to be uploaded
- * \return Returns -1 for error and 0 for succesful upload
+ * \param totalSplashImages  - Total number of Splash images to be uploaded
+ * \return - Returns -1 for error and 0 for succesful upload
  */
 int DLP9000::UpdatePatternMemory(int totalSplashImages)
 {
@@ -295,10 +295,10 @@ int DLP9000::UpdatePatternMemory(int totalSplashImages)
 /**
  * @brief DLP9000::uploadPatternToEVM
  * Updates the Pattern images into the Splash block on the Firmware image in the EVM on the fly
- * @param master - I - boolean to indicate if it is madetr or slave
- * @param splashImageCount - I - the Index of the Splash Image to be updated
- * @param splash_size - I - size of the splash image that is being updated
- * @param splash_block - I - the updated splash block
+ * @param master boolean to indicate if it is madetr or slave
+ * @param splashImageCount - the Index of the Splash Image to be updated
+ * @param splash_size - size of the splash image that is being updated
+ * @param splash_block - the updated splash block
  * @return
  */
 int DLP9000::uploadPatternToEVM(bool master, int splashImageCount, int splash_size, uint08* splash_block)
@@ -368,7 +368,6 @@ void DLP9000::updateLUT(int ProjectionMode)
 {
     int totalSplashImages = 0;
     int ret;
-    QTime waitEndTime;
     char errStr[255];
 
     if(m_elements.size() <= 0)
@@ -454,7 +453,7 @@ void DLP9000::clearElements(void)
  * \brief DLP9000::setIT6535Mode
  * Sets the mode of the IT6535 receiver, options include:
  * Disabled, HDMI, and DisplayPort.
- * \param Mode The mode to set the IT6535 to
+ * \param Mode - The mode to set the IT6535 to
  */
 void DLP9000::setIT6535Mode(int Mode)
 {
@@ -490,9 +489,9 @@ void DLP9000::setIT6535Mode(int Mode)
  * total number of splash images of bit depth 24 based on the bit depth of each image
  * Also calculates the bitposition of each pattern element in the splash Image
  * and the index of the Splash image for each Pattern element.
- * \param totalSplashImages - O - Total number of splash images to be created from
+ * \param totalSplashImages - Total number of splash images to be created from
  *                                the available Pattern images
- * \param ProjectionMode Determines whether to format for POTF or video pattern mode
+ * \param ProjectionMode - Determines whether to format for POTF or video pattern mode
  * \return - 0 - success
  *          -1 - failure
  */
@@ -597,6 +596,15 @@ void DLP9000::SetLEDIntensity(PrintSettings dlp_PrintSettings, PrintScripts dlp_
     }
 }
 
+/*!
+ * \brief DLP9000::PatternUpload
+ * Handler function for pattern uploads
+ * \param ImageList - List of image files to be uploaded
+ * \param dlp_PrintControls - Checks nSlice for sanity check, passed along to the AddPatterns function
+ * \param dlp_PrintSettings - Passed along to the AddPatterns function
+ * \param dlp_PrintScript - Passed along to the AddPatterns function
+ * \return
+ */
 int DLP9000::PatternUpload(QStringList ImageList, PrintControls dlp_PrintControls, PrintSettings dlp_PrintSettings, PrintScripts dlp_PrintScript)
 {
     int nPatterns = ImageList.count();
@@ -610,6 +618,11 @@ int DLP9000::PatternUpload(QStringList ImageList, PrintControls dlp_PrintControl
     return nPatterns;
 }
 
+/*!
+ * \brief DLP9000::PatternDisplay
+ * Sets whether to start, stop, or pause pattern display
+ * \param DisplaySetting
+ */
 void DLP9000::PatternDisplay(int DisplaySetting)
 {
     LCR_PatternDisplay(DisplaySetting);

@@ -5,3 +5,4 @@ This documentation was generated with doxygen + breathe and is under constructio
 
 .. doxygenclass:: MainWindow
 	:members:
+	:private-members:
