@@ -14,7 +14,7 @@
 /*!
  * \brief DLP9000::InitProjector
  * Initializes connection to the projector.
- * \return - Returns true if connection was succesful, false otherwise
+ * \return - Returns true if connection was successful, false otherwise
  */
 bool DLP9000::InitProjector(void)
 {
@@ -223,7 +223,7 @@ void DLP9000::AddPatterns(QStringList fileNames, PrintSettings m_PrintSettings, 
  * Creates Splash images from all the Pattern elements.
  * Converts the splash images to splash blocks and uploads pattern images.
  * \param totalSplashImages  - Total number of Splash images to be uploaded
- * \return - Returns -1 for error and 0 for succesful upload
+ * \return - Returns -1 for error and 0 for successful upload
  */
 int DLP9000::UpdatePatternMemory(int totalSplashImages)
 {
@@ -585,14 +585,14 @@ int DLP9000::calculateSplashImageDetails(int *totalSplashImages, bool firmware, 
     return 0;
 }
 
-void DLP9000::SetLEDIntensity(PrintSettings dlp_PrintSettings, PrintScripts dlp_PrintScript)
+void DLP9000::SetLEDIntensity(int UVIntensity, int PrintScript, QStringList LEDScriptList)
 {
     //Set LED currents to 0 red, 0 green, set blue to chosen UVIntensity
-    if (dlp_PrintScript.PrintScript == ON){ //If printscript is on
-        LCR_SetLedCurrents(0,0,(dlp_PrintScript.LEDScriptList.at(0).toInt())); //Set LED intensity to first value in printscript
+    if (PrintScript == ON){ //If printscript is on
+        LCR_SetLedCurrents(0,0,(LEDScriptList.at(0).toInt())); //Set LED intensity to first value in printscript
     }
     else{ //if printscript is off
-        LCR_SetLedCurrents(0, 0, dlp_PrintSettings.UVIntensity); //set static LED intensity
+        LCR_SetLedCurrents(0, 0, UVIntensity); //set static LED intensity
     }
 }
 

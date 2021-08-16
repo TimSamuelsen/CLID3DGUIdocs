@@ -34,19 +34,19 @@ public:
     void startPatSequence(void);
     void clearElements(void);
     void setIT6535Mode(int Mode);
-    void SetLEDIntensity(PrintSettings dlp_PrintSettings, PrintScripts dlp_PrintScript);
+    void SetLEDIntensity(int UVIntensity, int PrintScript, QStringList LEDScriptList);
     int PatternUpload(QStringList ImageList, PrintControls dlp_PrintControls, PrintSettings dlp_PrintSettings, PrintScripts dlp_PrintScript);
     void PatternDisplay(int DisplaySetting);
 
 signals:
     /*!
-     * \brief DLPPrintSignal Light engine terminal printing  signal, connceted to TerminalPrint function in Main Window.
+     * \brief DLPPrintSignal Light engine terminal printing  signal, connected to TerminalPrint function in Main Window.
      * \param StringToPrint String to be printed
      */
     void DLPPrintSignal(QString StringToPrint);
     /*!
      * \brief DLPError Light engine error signal, connected to showError function in Main Window.
-     * \param ErrorString Error string to be transferred
+     * \param ErrorString Error string to be shown
      */
     void DLPError(QString ErrorString);
 

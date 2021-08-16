@@ -227,7 +227,7 @@ void MainWindow::Check4VideoLock()
     if (repeatCount == 0)
         PrintToTerminal("Attempting to Lock to Video Source");
 
-    //if attempt to get status is succesful
+    //if attempt to get status is successful
     if (LCR_GetStatus(&HWStatus, &SysStatus, &MainStatus) == 0)
     {
         //If BIT3 in main status is set, then video source has already been locked
@@ -235,7 +235,7 @@ void MainWindow::Check4VideoLock()
             PrintToTerminal("External Video Source Locked");
             VlockPopup.close();
 
-            //If attempt to set to Video pattern mode is not succesful
+            //If attempt to set to Video pattern mode is not successful
             if (LCR_SetMode(PTN_MODE_VIDEO) < 0)
             {
                 showError("Unable to switch to video pattern mode");
@@ -640,7 +640,7 @@ void MainWindow::on_LightEngineConnectButton_clicked()
 
 /*!
  * \brief MainWindow::on_StageConnectButton_clicked
- * Connects to stage, if succesful gets position, sends
+ * Connects to stage, if successful gets position, sends
  * home commands and gets position
  */
 void MainWindow::on_StageConnectButton_clicked()
@@ -1011,7 +1011,7 @@ void MainWindow::on_SetInjectionDelay_clicked()
 /**
  * @brief MainWindow::showError
  * helper function to show the appropriate API Error message
- * @param errMsg - I - error messgae to be shown
+ * @param errMsg - I - error message to be shown
  */
 void MainWindow::showError(QString errMsg)
 {
@@ -1762,6 +1762,12 @@ void MainWindow::VP8bitWorkaround()
     PrintToTerminal("Etime: " + QString::number(ExposureTimeList.count()) + ", Dtime: " + QString::number(DarkTimeList.count()) + ", LEDlist: " + QString::number(LEDlist.count()) + ", Images: " + QString::number(imageList.count()));
 }
 
+/*!
+ * \brief MainWindow::PrintToTerminal
+ * Handler function for printing to terminal.
+ * \param StringToPrint
+ *
+ */
 void MainWindow::PrintToTerminal(QString StringToPrint)
 {
     ui->ProgramPrints->append(StringToPrint);
@@ -1941,7 +1947,7 @@ void MainWindow::on_StartPrint_clicked()
         PrintToTerminal("Entering Printing Procedure");
         PrintStartTime = QTime::currentTime(); //Get print start time from current time
 
-        PrintControl.StartPrint(m_PrintSettings, m_PrintScript, m_InjectionSettings);
+        PrintControl.StartPrint(m_PrintSettings, m_PrintScript, m_InjectionSettings.ContinuousInjection);
         PrintProcess();
     }
 }
@@ -1953,7 +1959,7 @@ void MainWindow::on_StartPrint_clicked()
  */
 void MainWindow::on_AbortPrint_clicked()
 {
-    PrintControl.AbortPrint(m_PrintSettings, &m_PrintControls);
+    PrintControl.AbortPrint(m_PrintSettings.StageType, &m_PrintControls);
     ui->ProgramPrints->append("PRINT ABORTED");
 }
 
@@ -1965,7 +1971,7 @@ void MainWindow::PrintProcess()
             m_PrintControls.remainingImages = PrintControl.ReuploadHandler(ImageList, m_PrintControls, m_PrintSettings, m_PrintScript);
         }
         SetExposureTimer();
-        PrintControl.PrintProcessHandler(&m_PrintControls, m_PrintSettings);
+        PrintControl.PrintProcessHandler(&m_PrintControls, m_PrintSettings.InitialExposure);
     }
     else{
         PrintComplete();
@@ -1980,7 +1986,7 @@ void MainWindow::PrintProcess()
 void MainWindow::pumpingSlot(void)
 {
     QTimer::singleShot(m_PrintSettings.DarkTime/1000, Qt::PreciseTimer, this, SLOT(ExposureTimeSlot()));
-    PrintControl.StagePumpingHandler(m_PrintControls, m_PrintSettings, m_PrintScript);
+    PrintControl.StagePumpingHandler(m_PrintControls.layerCount, m_PrintSettings, m_PrintScript);
 }
 
 /**
@@ -1997,7 +2003,7 @@ void MainWindow::ExposureTimeSlot(void)
 
     //Video pattern mode handling
     if (m_PrintSettings.ProjectionMode == VIDEOPATTERN){ //If in video pattern mode
-        if (PrintControl.VPFrameUpdate(&m_PrintControls, m_PrintSettings) == true){
+        if (PrintControl.VPFrameUpdate(&m_PrintControls, m_PrintSettings.BitMode) == true){
             if (m_PrintControls.FrameCount < ui->FileList->count()){ //if not at end of file list
                 QPixmap img(ui->FileList->item(m_PrintControls.FrameCount)->text()); //select next image
                 ImagePopoutUI->showImage(img); //display next image
