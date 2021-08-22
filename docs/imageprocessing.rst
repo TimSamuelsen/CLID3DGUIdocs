@@ -6,13 +6,13 @@ Currently this image processing is only in use for encoding images for Video Pat
 
 Image Encoding
 -----------------
+.. image:: images/image-proccessing.png
+
 The image encoding process takes input 1-bit binary images and converts them to 24-bit images.
 Each binary image consists of only 1 bit layer while a 24-bit image contains 24 bit layers. 
 The encoded image is created by stacking 24 1-bit images into the RGB channels of the 24-bit image.
-The image below displays an encoded image where the numbers 1-8 are encoded in the blue channel, 1-16
-is encoded in the green channel, and 17-24 is encoded in the red channel.
 
-.. image:: https://i.imgur.com/ha9SCOg.png
+.. image:: images/image-process-algorithm.png
 
 Controls
 -----------
