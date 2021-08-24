@@ -6,7 +6,7 @@ Currently this image processing is only in use for encoding images for Video Pat
 
 Image Encoding
 -----------------
-.. image:: images/image-proccessing.png
+.. image:: images/image-processing.png
 
 The image encoding process takes input 1-bit binary images and converts them to 24-bit images.
 Each binary image consists of only 1 bit layer while a 24-bit image contains 24 bit layers. 
