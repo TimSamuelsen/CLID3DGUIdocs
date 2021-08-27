@@ -35,7 +35,7 @@ Currently some of the information on this website is withheld pending publishing
    
    30umclip3dprinter
    installation
-   contributors
+   credits
    history
 
 .. toctree::

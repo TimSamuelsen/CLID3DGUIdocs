@@ -9,13 +9,31 @@ Manual Stage Control
     :align: right
     :figwidth: 300px
 
-**Current Stage Position:**
+**Stage Select:**
 
-**Connect To Stage:**
+**Stage Connection:**
 
-**Movement Controls:**
+**Endstops:**
 
-**Movement Configuration:**
+**Stage Position:**
+
+**Absolute Move:**
+
+**Relative Move:**
+
+**Stop Motion:**
+
+**Velocity:**
+
+**Acceleration:**
+
+**Set Position:**
+
+**Min End of Run:**
+
+**Max End of Run:**
+
+**Custom Commands:**
 
 **Terminal Output:**
 
@@ -26,13 +44,21 @@ Manual Pump Control
     :align: right
     :figwidth: 300px
     
-**Select Target:**
-
-**Clear Stored Action:**
-
 **Connect To Pump:**
 
-**Configuration Commands**
+**Target:**
+
+**Active Commands:**
+
+**Target Volume:**
+
+**Target Time:**
+
+**Syringe Volume:**
+
+**Withdraw Rate:**
+
+**Infuse Rate:**
 
 **Custom Commands:**
 

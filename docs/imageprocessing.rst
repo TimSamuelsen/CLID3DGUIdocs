@@ -20,20 +20,21 @@ Controls
 **Input Images:**
 Select the binary input image to be encoded.
 
-**Target Directory:**
+**Select Target Directory:**
 Select where the encoded images will be stored.
 
 **Output Images:**
-The ouput image window shows the encoded image files that are generated.
-
-**Start Encoding:**
-Start Encoding starts the encoding process.
+The ouput image window shows the encoded image files that are generated and their location.
 
 **Display Window:**
 The display window show the encoded images that are generated. The user should validate that these images
-look correct
+look correct.
+
+**Progress Bar:**
+Provides the user with visual feedback on the active encoding.
+
+**Select Encoding Type:**
+Starts the encoding process. Select between converting 1-bit images to 24-bit images for 1-bit/binary prints or converting 8-bit images to 24-bit images for 8-bit/grayscale prints
 
 **Terminal Window:**
 Provides the user with some live feedback of the encoding process. Also serves as a valuable debug tool.
-
-.. image:: images/image-processing.PNG
