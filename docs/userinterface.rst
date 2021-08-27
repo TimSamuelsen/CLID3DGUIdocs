@@ -108,16 +108,17 @@ Image Files
 ------------------------
 .. figure:: images/ui-image-files.PNG
     :align: right
-    :figwidth: 400px
+    :figwidth: 300px
 	
 Object image files are selected here. Make sure your image files are located in the same file and named alphabetically
 the software will sort the files alphabetically as they are uploaded to the light engine.
-
+|
+|
 Terminal Output
 -------------------
 .. figure:: images/ui-terminal-log.PNG
     :align: right
-    :figwidth: 400px
+    :figwidth: 300px
 
 **Log File Destination:**
 Determines where the log file will be stored.
@@ -197,4 +198,4 @@ Graphics Window
 The graphics window displays a graph of stage position vs. time updated throughout the print. 
 It also displays the current layer of the print and the estimated remaining print time. 
 
-.. image:: images/mainwindow.PNG
+.. image:: images/ui-graphics-window.png
