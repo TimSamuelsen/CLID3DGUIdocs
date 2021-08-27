@@ -115,6 +115,7 @@ the software will sort the files alphabetically as they are uploaded to the ligh
 
 |
 |
+|
 
 Terminal Output
 -------------------
