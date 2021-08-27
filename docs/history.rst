@@ -59,13 +59,13 @@ The project was in the prototyping phase from 01/17/2021-03/24/2021.
 * **NEW:** Second printer support, GCode stage support
 
 0.3.1 (2021-07-01)
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 * **NEW:** Continuous injection mode
 * **IMPROVED:** Added dark time, injection rate, and injection volume to supported dynamic variables
 
 0.3.2 (2021-07-17)
---------------------
+~~~~~~~~~~~~~~~~~~~
 
 * **NEW:** Pre and post stage movement injection delay, first attempt at vp8bit workaround
 * **FIX:** Initial exposure time bug, intermittent crash issue was fixed by reverting layerCount variable back to uint
@@ -78,12 +78,12 @@ The project was in the prototyping phase from 01/17/2021-03/24/2021.
 
 
 0.4.1 (2021-08-14)
--------------------
+~~~~~~~~~~~~~~~~~~~
 * **NEW:** Revised system arcitecture, increasing program modularity
 * **IMPROVED:** Removed all access to mainwindow from other modules, leaned into the signal and slots approach in Qt to handle errors messages and terminal
 
 0.4.2 (2021-08-25)
--------------------
+~~~~~~~~~~~~~~~~~~~
 * **NEW:** Redesigned software now working on 30 um printer, Added doxygen + breathe integration for documentation 
 * **FIX:** Stage position feedback, video pattern in dynamic mode crashing issues 
 * **IMPROVED:** Serial connection pass through from manual control windows, add pattern function reworked

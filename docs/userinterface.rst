@@ -23,7 +23,7 @@ Select between a standard CLIP printer and other printers.
 General Print Settings
 ---------------------------
 
-.. figure:: images/ui-general-print-settings.png
+.. figure:: images/ui-general-print-settings.PNG
     :align: right
     :figwidth: 300px
 	
@@ -54,7 +54,7 @@ The print script is used to dynamically control print variables on a layer by la
 Light Engine Control
 ---------------------------
 
-.. figure:: images/ui-light-engine-control.png
+.. figure:: images/ui-light-engine-control.PNG
     :align: right
     :figwidth: 300px
 
@@ -163,7 +163,7 @@ The pump connects in a similar manner to the stage. Select the correct COM port 
 
 Popout Windows
 ---------------------------
-.. figure:: images/popout-windows.png
+.. figure:: images/popout-windows.PNG
     :align: right
     :figwidth: 300px
 

@@ -6,16 +6,16 @@ Currently this image processing is only in use for encoding images for Video Pat
 
 Image Encoding
 -----------------
-.. image:: images/image-processing.png
+.. image:: images/image-process-algorithm.png
 
 The image encoding process takes input 1-bit binary images and converts them to 24-bit images.
 Each binary image consists of only 1 bit layer while a 24-bit image contains 24 bit layers. 
 The encoded image is created by stacking 24 1-bit images into the RGB channels of the 24-bit image.
 
-.. image:: images/image-process-algorithm.png
-
 Controls
 -----------
+
+.. image:: images/image-processing.PNG
 
 **Input Images:**
 Select the binary input image to be encoded.
@@ -35,3 +35,5 @@ look correct
 
 **Terminal Window:**
 Provides the user with some live feedback of the encoding process. Also serves as a valuable debug tool.
+
+.. image:: images/image-processing.PNG
