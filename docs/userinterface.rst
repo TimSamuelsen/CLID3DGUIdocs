@@ -178,13 +178,25 @@ Opens the manual stage control pop-up window. See Features->Manual Controls->Man
 
 Stage Position and Print Monitoring
 ------------------------------------
-.. figure:: images/ui-stage-position-monitoring.PNG
+.. figure:: images/ui-stage-position-monitoring.png
     :align: right
     :figwidth: 300px
 
+**Stage Position:**
+The current stage position is displayed with a slider and indicator in units of mm.
+It is continuously updating during the initialization and print process, the user can also
+use the Get button to poll the stage for it's current position. 
+
+**Print Monitoring:**
+There are 6 possible live values from the print that can be displayed to provide the user with feedback
+on which print parameters are being used or to monitor sensor inputs. Currently this is used to display
+print parameters that are handled by the print script when in dynamic print mode.
 
 Graphics Window
 -----------------
-.. figure:: images/ui-graphics-window.PNG
+.. figure:: images/ui-graphics-window.png
     :align: right
     :figwidth: 300px
+
+The graphics window displays a graph of stage position vs. time updated throughout the print. 
+It also displays the current layer of the print and the estimated remaining print time. 
