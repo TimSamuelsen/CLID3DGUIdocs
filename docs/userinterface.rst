@@ -163,7 +163,7 @@ The pump connects in a similar manner to the stage. Select the correct COM port 
 
 Popout Windows
 ---------------------------
-.. figure:: images/popout-windows.PNG
+.. figure:: images/ui-popout-windows.PNG
     :align: right
     :figwidth: 300px
 
@@ -178,6 +178,13 @@ Opens the manual stage control pop-up window. See Features->Manual Controls->Man
 
 Stage Position and Print Monitoring
 ------------------------------------
+.. figure:: images/ui-stage-position-monitoring.PNG
+    :align: right
+    :figwidth: 300px
+
 
 Graphics Window
 -----------------
+.. figure:: images/ui-graphics-window.PNG
+    :align: right
+    :figwidth: 300px
