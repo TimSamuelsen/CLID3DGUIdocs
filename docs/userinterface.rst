@@ -112,8 +112,10 @@ Image Files
 	
 Object image files are selected here. Make sure your image files are located in the same file and named alphabetically
 the software will sort the files alphabetically as they are uploaded to the light engine.
+
 |
 |
+
 Terminal Output
 -------------------
 .. figure:: images/ui-terminal-log.PNG
