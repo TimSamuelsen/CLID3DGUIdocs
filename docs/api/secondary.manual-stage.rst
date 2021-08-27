@@ -1,5 +1,5 @@
 ============
-Main Window
+Manual Stage Control
 ============
 This documentation is under construction.
 

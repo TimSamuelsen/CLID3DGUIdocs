@@ -108,7 +108,7 @@ Image Files
 ------------------------
 .. figure:: images/ui-image-files.PNG
     :align: right
-    :figwidth: 300px
+    :figwidth: 400px
 	
 Object image files are selected here. Make sure your image files are located in the same file and named alphabetically
 the software will sort the files alphabetically as they are uploaded to the light engine.
@@ -117,7 +117,7 @@ Terminal Output
 -------------------
 .. figure:: images/ui-terminal-log.PNG
     :align: right
-    :figwidth: 300px
+    :figwidth: 400px
 
 **Log File Destination:**
 Determines where the log file will be stored.
@@ -163,7 +163,7 @@ The pump connects in a similar manner to the stage. Select the correct COM port 
 
 Popout Windows
 ---------------------------
-.. figure:: images/ui-popout-windows.PNG
+.. figure:: images/ui-popout-windows.png
     :align: right
     :figwidth: 300px
 
@@ -194,9 +194,7 @@ print parameters that are handled by the print script when in dynamic print mode
 
 Graphics Window
 -----------------
-.. figure:: images/ui-graphics-window.png
-    :align: right
-    :figwidth: 300px
-
 The graphics window displays a graph of stage position vs. time updated throughout the print. 
 It also displays the current layer of the print and the estimated remaining print time. 
+
+.. image:: images/mainwindow.PNG
