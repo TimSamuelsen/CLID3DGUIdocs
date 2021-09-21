@@ -105,7 +105,8 @@ html_favicon = 'DeSimoneLogo.ico'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'style_nav_header_background': '#8c1515'
+    'style_nav_header_background': '#8c1515',
+    'logo_only': True,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
