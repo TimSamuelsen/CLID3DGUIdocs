@@ -43,7 +43,7 @@ Currently some of the information on this website is withheld pending publishing
    :caption: Features
    
    userinterface
-   printmodes
+   projectionmodes
    dynamicprint
    imageprocessing
    manualcontrols
