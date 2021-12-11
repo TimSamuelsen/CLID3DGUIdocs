@@ -4,6 +4,11 @@ User Interface
 .. image:: images/mainwindow.PNG
     :width: 1600px
 
+Some features of the user interface are currently confidential while awaiting the 
+publication of the relevant research. All print parameters, image files, and print scripts 
+are stored when the GUI is closed and upon restart the GUI will initialize with the previous 
+stored parameters.
+
 Print Customization
 ---------------------------
 
@@ -15,7 +20,8 @@ The print customization window determines high level print features. See
 Features->Print Modes to learn more.
 
 **Select Projection Mode:**
-Select between Pattern On The Fly (POTF) and video pattern mode.
+Select between Pattern On The Fly (POTF), Video Pattern and Video mode. The printer will always initialize in
+POTF mode and the light engine must be connected to properly switch projection modes.
 
 **Select Printer:**
 Select between a standard CLIP printer and other printers.
@@ -27,20 +33,39 @@ General Print Settings
     :align: right
     :figwidth: 300px
 	
-**Initial Exposure Time:**
-The initial exposure time determines the exposure time for the first layer
-of the print. This allows the print to properly adhere to the build platform.
+**Select Resin:**
+Select which resin you are currently printing with. Currently this has no
+effect on the print and is only stored in the print log for future reference.
+Double click to edit the text field or select from a list of previously used resins.
+
+**Bit Depth:**
+Select the bit depth of your input images, the default is 1-bit
+binary images. The bit depth determines how many bits the intensity of a given pixel can occupy.
+Increasing the bit depth allows for more granular and detailed control of a given pixel intensity,
+while also increasing the file size of a given image. In POTF mode increasing the bit depth will 
+increase reupload times significantly while also lowering the max image upload. In Video Pattern 
+mode every given bit depth requires separate image processing, see the Image Processing page for
+more details.
+
+A pixel with a bit depth of 1 is binary and can only be 0 or 1 corresponding to on or off. 
+A pixel with bit depth 4 can have values ranging from 0000 to 1111 (0-15 in decimal) and a pixel 
+with bit depth 8 can have values ranging from 0000 0000 to 1111 1111 (0-255 in decimal). 
+The intensities for non-binary images(bit depth > 1) are applied after the set LED intensity. For a given pixel in a 
+8 bit depth image where the LED intensity is set to 60 and the pixel intensity is 85 the resulting intensity of that
+pixel will be 60 * (85/255) = 20.
+
+**Max Image Upload:**
+Determines the max number of images to upload at one time when in POTF mode, will only affect POTF mode.
+With 1-bit images this caps out at 400 images, with 8-bit images this caps out at 50 images 
+(can be calculated as 400/bit depth). User may want to keep the max image upload low
+to avoid print discontinuities caused by long upload times.
 
 **Starting Position:**
 Simply determines the starting position of the print, this value should be at the
 deadzone thickness from the window. Any movement relative to this value will be negative
 each layer will move the stage closer to 0.
 
-**Max Image Upload:**
-Determines the max number of images to upload at one time when in POTF
-mode. With 1-bit images this caps out at 400 images, with 8-bit images
-this caps out at 50 images. User may want to keep the max image upload low
-to avoid print discontinuities caused by long upload times.
+
 
 **Layer Thickness:**
 Determines the layer thickness of the print. If set to 10 um each image file will result
@@ -58,6 +83,11 @@ Light Engine Control
     :align: right
     :figwidth: 300px
 
+**Initial Exposure Time:**
+The initial exposure time determines the exposure time for the first layer
+of the print. This allows the print to properly adhere to the build platform.
+No stage movements are performed during the initial exposure.
+
 **Exposure Time:**
 Determines how long the light engine will expose for each layer.
 
@@ -68,10 +98,7 @@ where 0 = 0% LED duty cycle and 255 = 100% LED duty cycle.
 **Dark time:**
 Determines the time in between exposures, dark time is used for stage movement and timing overhead.
 
-**Bit Depth:**
-Select the bit depth of your input images, the default is 1-bit
-binary images. Increasing the bit depth allows for varying depths of
-grayscale up to 8-bit grayscale images.
+
 
 Stage Control
 ---------------------------
