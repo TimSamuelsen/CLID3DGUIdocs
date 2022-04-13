@@ -33,16 +33,10 @@ Currently some of the information on this website is withheld pending publishing
    :maxdepth: 2
    :caption: General
    
-   30umclip3dprinter
+   publications
    installation
    credits
    history
-
-.. toctree::
-   :maxdepth: 2
-   :caption: User Guides
-
-   userGuides/printercalibration
 
 .. toctree::
    :maxdepth: 2

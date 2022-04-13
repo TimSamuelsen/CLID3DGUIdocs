@@ -87,3 +87,45 @@ The project was in the prototyping phase from 01/17/2021-03/24/2021.
 * **NEW:** Redesigned software now working on 30 um printer, Added doxygen + breathe integration for documentation 
 * **FIX:** Stage position feedback, video pattern in dynamic mode crashing issues 
 * **IMPROVED:** Serial connection pass through from manual control windows, add pattern function reworked
+
+0.4.3 (2021-09-21)
+~~~~~~~~~~~~~~~~~~~~
+* **NEW:** Revamped print logs, print titles and resin selection now logged, stepped continuous injection
+* **FIX:** First layer intensity with print script now set correctly, no longer crashes with print script and no images
+* **IMPROVED:** Positional feedback update frequency increased
+  
+0.5 (2021-10-11)
+~~~~~~~~~~~~~~~~~~~~
+* **NEW:** Video mode implemented
+* **IMPROVED:** Split out graphics, print script handling, printcontrols into separate classes and .ui files
+
+0.5.1 (2021-10-26)
+~~~~~~~~~~~~~~~~~~~~
+* **NEW:** Pixel binning added to image processing, post exposure delay
+* **FIX:** Image scaling crashing issue resolved
+* **IMPROVED:** Split out print settings toolbox into separate class and .ui files, reconfigured ui to use Qt native layouts
+
+0.6 (2021-11-10)
+~~~~~~~~~~~~~~~~~~~~
+* **NEW:** Pattern repeating for video pattern mode, jerk time parameter, 
+* **FIX:** Stage initialization hanging
+
+0.6.1 (2021-11-16)
+~~~~~~~~~~~~~~~~~~~~
+* **NEW:** Initial attempt of adding Thorcam API and creating focus calibration window
+
+0.7 (2021-12-9)
+~~~~~~~~~~~~~~~~~~~~
+* **NEW:** Storing of images and print script upon closing window, reset button
+* **IMPROVED:** Image buffer reading of ThorCam images
+
+0.7.1 (2022-2-8)
+~~~~~~~~~~~~~~~~~~~~
+* **NEW:** New stage initialization protocol
+* **IMPROVED:** Cleaned up DLP9000 API and mainwindow source code, updated print control and print commmands
+
+1.0 (2022-3-23) Final Commit Tim
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* **NEW:** Auto connection to peripherals and initialization of light engine upon startup
+* **FIX:** Initial exposure bug
+* **IMPROVED:** Added code formatting (customized Google C++ standards), cleaned up SMC100CC API
